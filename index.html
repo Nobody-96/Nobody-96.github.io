@@ -526,7 +526,7 @@ const PUBS = [
 ];
 
 const GROUPS = [
-  ["top-conference", "Top-tier conference", "Top-tier Conference"],
+  ["top-conference", "Top Conference", "Top Conference"],
   ["conference", "Conference", "Conference"],
   ["workshop", "Workshop", "Workshop"],
   ["journal", "Journal", "Journal"],
@@ -547,7 +547,7 @@ const GROUPS = [
   const firstCount = PUBS.filter(isFirst).length;
   const topCount = PUBS.filter(p => p.type === "top-conference").length;
   document.getElementById("pubNote").textContent =
-    `${PUBS.length} papers, ${topCount} at top-tier conferences, ${firstCount} as first author. † Corresponding author.`;
+    `${PUBS.length} papers, ${topCount} at  conferences, ${firstCount} as first author. † Corresponding author.`;
 
   const chipDefs = [["all", "All", PUBS.length]].concat(
     GROUPS.map(([k, , chip]) => [k, chip, PUBS.filter(p => p.type === k).length]).filter(c => c[2] > 0)
